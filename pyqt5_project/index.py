@@ -1,14 +1,28 @@
-# 관리자용 cctv과제 프로그램 (PyQt5 - SQLite - Socket)
-# 1) 사원 회원가입
-# 2) 사원 로그인
-# 3) 전체 사원들과의 채팅
-# 4) cctv 관제
-# 5) cctv 1개 클릭시 -> yolo detection 수행 화면 띄우기
-
 import sys
-# from PyQt5.uic import loadUi
-from PyQt5 import uic
-from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QDialog, QApplication, QWidget
+import login, join, main
+from PyQt5.QtWidgets import QApplication, QStackedWidget
 
 
+
+if __name__=="__main__":
+    app = QApplication(sys.argv)
+    widget = QStackedWidget()
+
+    login_obj = login.LoginForm(widget)
+    widget.addWidget(login_obj)
+
+    join_obj = join.JoinForm(widget)
+    widget.addWidget(join_obj)
+
+    main_obj = main.MainForm(widget)
+    widget.addWidget(main_obj)
+
+    widget.setWindowTitle("4IND")
+    widget.setFixedWidth(1200)
+    widget.setFixedHeight(800)
+    widget.show()
+
+    try:
+        sys.exit(app.exec_())
+    except:
+        print("Exiting")

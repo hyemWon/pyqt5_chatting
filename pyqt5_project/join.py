@@ -3,6 +3,8 @@ from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import *
 
+import sqlite3
+
 class JoinForm(QDialog):
     def __init__(self, widget):
         super(JoinForm, self).__init__()
@@ -20,14 +22,23 @@ class JoinForm(QDialog):
         id = self.idEdit.text()
         pw = self.pwEdit.text()
         confirm = self.confirmEdit.text()
-        print(id)
-        print(pw)
-        print(confirm)
 
         if len(id)==0 or len(pw)==0 or len(confirm)==0:
             self.chLabel.setText("Please input all fields. ")
             print('입력되지 않은 정보가 있습니다.')
+        elif pw != confirm:
+            self.chLabel.setText("Passwords do not match")
         else:
+            conn = sqlite3.connect('employee.db')
+            cur = conn.cursor()
+
+            #---중복확인 코드 추가하기
+
+            sql = ('INSERT INTO employee_info VALUES(?, ?)')
+            cur.execute(sql, (id, pw))
+
+            conn.close() # 연결해제
+
             print("회원가입이 완료되었습니다.")
             self.reset_ui()
             self.widget.setCurrentIndex(self.widget.currentIndex() - 1)

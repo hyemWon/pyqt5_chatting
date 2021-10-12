@@ -15,6 +15,7 @@ class MainForm(QMainWindow):
         self.port = 5050
         self.header = 64
         self.format = 'utf-8'
+#         self.connected = True
         self.DISCONNECTED_MESSAGE = "!DISCONNECT"
 
         self.c_sock = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
@@ -60,6 +61,8 @@ class MainForm(QMainWindow):
             if recv_msg:
                 print(recv_msg)
                 self.chatEdit.appendPlainText(recv_msg)
+                
+        print("프로그램 종료")
 
     def closeEvent(self, QCloseEvent):
         ans = QMessageBox.question(self, "종료 확인", "종료 하시겠습니까?",
@@ -67,6 +70,8 @@ class MainForm(QMainWindow):
 
         if ans == QMessageBox.Yes:  # Yes 클릭시 종료
             self.send(self.DISCONNECTED_MESSAGE) # 종료시 연결종료 메시지 전송
+            # self.connected = False
+            # time.sleep(0.5)
             self.c_sock.close()
             QCloseEvent.accept()
         else:

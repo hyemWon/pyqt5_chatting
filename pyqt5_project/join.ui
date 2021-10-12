@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
+    <width>600</width>
     <height>800</height>
    </rect>
   </property>
@@ -18,7 +18,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1200</width>
+     <width>600</width>
      <height>800</height>
     </rect>
    </property>
@@ -30,9 +30,9 @@ background-color:qlineargradient(spread:pad, x1:0.112, y1:0.107318, x2:1, y2:0.9
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>475</x>
-      <y>160</y>
-      <width>250</width>
+      <x>150</x>
+      <y>180</y>
+      <width>300</width>
       <height>60</height>
      </rect>
     </property>
@@ -50,8 +50,8 @@ color: rgb(52, 52, 52);</string>
    <widget class="QPushButton" name="enrollBtn">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>470</y>
+      <x>150</x>
+      <y>510</y>
       <width>300</width>
       <height>45</height>
      </rect>
@@ -76,8 +76,8 @@ QPushButton#enrollBtn:hover{
    <widget class="QPushButton" name="cancleBtn">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>530</y>
+      <x>150</x>
+      <y>570</y>
       <width>300</width>
       <height>45</height>
      </rect>
@@ -102,9 +102,9 @@ QPushButton#cancleBtn:hover{
    <widget class="QLineEdit" name="idEdit">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>280</y>
-      <width>300</width>
+      <x>150</x>
+      <y>300</y>
+      <width>220</width>
       <height>40</height>
      </rect>
     </property>
@@ -125,8 +125,8 @@ font: 11pt &quot;Sans Serif&quot;;</string>
    <widget class="QLineEdit" name="pwEdit">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>330</y>
+      <x>150</x>
+      <y>350</y>
       <width>300</width>
       <height>40</height>
      </rect>
@@ -148,9 +148,9 @@ font: 11pt &quot;Sans Serif&quot;;</string>
    <widget class="QLabel" name="chLabel">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>430</y>
-      <width>301</width>
+      <x>150</x>
+      <y>450</y>
+      <width>300</width>
       <height>18</height>
      </rect>
     </property>
@@ -165,8 +165,8 @@ color: rgb(212, 0, 0);</string>
    <widget class="QLineEdit" name="confirmEdit">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>380</y>
+      <x>150</x>
+      <y>400</y>
       <width>300</width>
       <height>40</height>
      </rect>
@@ -183,6 +183,32 @@ font: 11pt &quot;Sans Serif&quot;;</string>
     </property>
     <property name="placeholderText">
      <string>confirm password</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="checkBtn">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>300</y>
+      <width>70</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#checkBtn{
+	border-radius:5px;
+	font: 75 12pt &quot;Manjari Bold&quot;;
+	background-color: rgba(191, 210, 225, 200);
+	color: rgb(52, 52, 52);
+}
+
+QPushButton#checkBtn:hover{
+	background-color: rgba(191, 210, 225, 160);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>check</string>
     </property>
    </widget>
   </widget>

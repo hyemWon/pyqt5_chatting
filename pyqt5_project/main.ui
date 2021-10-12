@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1500</width>
+    <width>1400</width>
     <height>1000</height>
    </rect>
   </property>
@@ -19,7 +19,7 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1130</width>
+      <width>1040</width>
       <height>1000</height>
      </rect>
     </property>
@@ -48,19 +48,77 @@ color: rgb(52, 52, 52);</string>
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
+    <widget class="QLabel" name="userLabel">
+     <property name="geometry">
+      <rect>
+       <x>930</x>
+       <y>20</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(46, 52, 54);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
    </widget>
-   <widget class="QWidget" name="widget" native="true">
+   <widget class="QWidget" name="chatWidget" native="true">
     <property name="geometry">
      <rect>
-      <x>1130</x>
+      <x>1038</x>
       <y>0</y>
-      <width>370</width>
+      <width>420</width>
       <height>1000</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 255, 200);</string>
     </property>
+    <widget class="QPlainTextEdit" name="chatEdit">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>30</y>
+       <width>340</width>
+       <height>850</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(46, 52, 54);</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="inputEdit">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>900</y>
+       <width>280</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>message</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="sendBtn">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>900</y>
+       <width>52</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(46, 52, 54);</string>
+     </property>
+     <property name="text">
+      <string>send</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -68,8 +126,8 @@ color: rgb(52, 52, 52);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1500</width>
-     <height>23</height>
+     <width>1400</width>
+     <height>28</height>
     </rect>
    </property>
   </widget>

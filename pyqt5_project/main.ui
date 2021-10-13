@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1400</width>
-    <height>1000</height>
+    <width>1200</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1040</width>
-      <height>1000</height>
+      <width>890</width>
+      <height>800</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -64,50 +64,153 @@ color: rgb(52, 52, 52);</string>
       <string/>
      </property>
     </widget>
+    <widget class="QLabel" name="feedLabel_1">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>180</y>
+       <width>381</width>
+       <height>261</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(250, 250, 250, 250);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="feedBtn">
+     <property name="geometry">
+      <rect>
+       <x>760</x>
+       <y>120</y>
+       <width>61</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#feedBtn{
+	border-radius:2px;
+	font: 75 10pt &quot;Manjari Bold&quot;;
+	background-color: rgba(26, 36, 122, 200);
+	color: rgb(250, 250, 250);
+}
+
+QPushButton#feedBtn:hover{
+	background-color: rgba(26, 36, 122, 180);
+}</string>
+     </property>
+     <property name="text">
+      <string>송출</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="urlEdit">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>120</y>
+       <width>310</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 2px;
+font: 11pt &quot;Sans Serif&quot;;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>video url</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="feedLabel_2">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>180</y>
+       <width>381</width>
+       <height>261</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(250, 250, 250, 250);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="feedLabel_3">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>460</y>
+       <width>381</width>
+       <height>261</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(250, 250, 250, 250);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="feedLabel_4">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>460</y>
+       <width>381</width>
+       <height>261</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(250, 250, 250, 250);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="chLabel">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>160</y>
+       <width>310</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Sans Serif&quot;;
+color: rgb(212, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="chatWidget" native="true">
     <property name="geometry">
      <rect>
-      <x>1038</x>
+      <x>889</x>
       <y>0</y>
-      <width>420</width>
-      <height>1000</height>
+      <width>310</width>
+      <height>800</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255, 200);</string>
+     <string notr="true">background-color: rgb(238, 238, 236);</string>
     </property>
-    <widget class="QPlainTextEdit" name="chatEdit">
-     <property name="geometry">
-      <rect>
-       <x>12</x>
-       <y>30</y>
-       <width>340</width>
-       <height>850</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(46, 52, 54);</string>
-     </property>
-    </widget>
-    <widget class="QTextEdit" name="inputEdit">
-     <property name="geometry">
-      <rect>
-       <x>12</x>
-       <y>900</y>
-       <width>280</width>
-       <height>40</height>
-      </rect>
-     </property>
-     <property name="placeholderText">
-      <string>message</string>
-     </property>
-    </widget>
     <widget class="QPushButton" name="sendBtn">
      <property name="geometry">
       <rect>
-       <x>300</x>
-       <y>900</y>
+       <x>245</x>
+       <y>730</y>
        <width>52</width>
        <height>40</height>
       </rect>
@@ -119,6 +222,36 @@ color: rgb(52, 52, 52);</string>
       <string>send</string>
      </property>
     </widget>
+    <widget class="QPlainTextEdit" name="chatEdit">
+     <property name="geometry">
+      <rect>
+       <x>17</x>
+       <y>20</y>
+       <width>280</width>
+       <height>700</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(46, 52, 54);
+background-color: rgb(255, 255, 255, 230);</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="inputEdit">
+     <property name="geometry">
+      <rect>
+       <x>17</x>
+       <y>730</y>
+       <width>222</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255, 230);</string>
+     </property>
+     <property name="placeholderText">
+      <string>message</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -126,7 +259,7 @@ color: rgb(52, 52, 52);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1400</width>
+     <width>1200</width>
      <height>28</height>
     </rect>
    </property>

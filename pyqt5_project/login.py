@@ -40,9 +40,6 @@ class LoginForm(QDialog):
                     self.main_obj.exec() # 창이 끝날때까지 기다리기
                     self.widget.show()
 
-                    # main_obj.set_worker(user_id)
-
-                    # self.widget.setCurrentIndex(self.widget.currentIndex()+2)
             except:
                 self.chLabel.setText("Not correct information")
 
@@ -59,15 +56,15 @@ class LoginForm(QDialog):
         self.pwEdit.clear()
         self.chLabel.clear()
 
-    def closeEvent(self, QCloseEvent):
-        ans = QMessageBox.question(self, "종료 확인", "종료 하시겠습니까?",
-                                   QMessageBox.Yes | QMessageBox.No, QMessageBox.No)  # 마지막 값은 기본값
-
-        if ans == QMessageBox.Yes:  # Yes 클릭시 종료
-            print("클라이언트 종료")
-            QCloseEvent.accept()
-        else:
-            QCloseEvent.ignore()
+    # def closeEvent(self, QCloseEvent):
+    #     ans = QMessageBox.question(self, "종료 확인", "종료 하시겠습니까?",
+    #                                QMessageBox.Yes | QMessageBox.No, QMessageBox.No)  # 마지막 값은 기본값
+    #
+    #     if ans == QMessageBox.Yes:  # Yes 클릭시 종료
+    #         print("클라이언트 종료")
+    #         QCloseEvent.accept()
+    #     else:
+    #         QCloseEvent.ignore()
 
 
 

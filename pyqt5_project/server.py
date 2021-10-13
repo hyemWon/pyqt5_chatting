@@ -65,6 +65,7 @@ class HandleClient(threading.Thread):
 
                 if not msg or msg == DISCONNECTED_MESSAGE:
                     self.connected = False
+                    server.room.sendAllClients(DISCONNECTED_MESSAGE)
                 else:
                     print(msg)
                     server.room.sendAllClients(msg)

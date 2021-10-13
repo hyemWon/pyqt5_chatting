@@ -88,7 +88,6 @@ class MainForm(QMainWindow):
         else:
             self.chLabel.setText("No longer create video.")
 
-
     # 시그널이 올때 실행할 슬롯
     def ImageUpdateSlot(self, Image, idx):  # 업데이트
         self.feedLabel[idx].setPixmap(QPixmap.fromImage(Image))
@@ -144,7 +143,6 @@ class VideoInput(QThread):
                                            QImage.Format_RGB888)
                 Pic = ConvertToQtFormat.scaled(640, 480, Qt.KeepAspectRatio)  # 종횡비 유지하면서 스케일
                 self.ImageUpdate.emit(Pic, self.idx)
-
 
     # def stop(self):
     #     self.ThreadActive = False
